@@ -13,27 +13,31 @@ There is a solution - disable KDE/Gnome wallpaper engine.
 
 ## How-to
 
-open editor 
+open editor, sfwall.c,
 
-change line 15 user to your account name
+At line 15, change user to your account name
 
     `#define WF_FOLDER "/home/user/Pictures/Wallpaper/"` 
 
-to bootstrap, 
+Bootstrap, 
 
     `cc -o nob nob.c`
 
-If you make any changes in sfwallp.c, all you have to do is run 
+If you make any changes in sfwall.c, all you have to do is run 
 
     `./nob`
 
-`cp ./sfwall /usr/bin`
+`cp ./sfwall /usr/bin/`
 
-`cd /usr/bin && chmod 755 ./sfwall`
+`cd /usr/bin/ && chmod 755 ./sfwall`
 
 ## FAQ
 
-1) why not use bash? 
+0) But why?  
+
+    A) To learn pure C language. That's why.
+
+1) why not use file.sh then run it via bash? 
 
     A) Because bash is not portable and scripting bash is painful.
     
@@ -53,21 +57,23 @@ If you make any changes in sfwallp.c, all you have to do is run
     
 4) Why not use other wallpaper manager? 
 
-    A) bloat
+    A) I don't need wallpaper viewer and picker. I don't care. 
 
-    B) Different languages
+    B) bloat. 
 
-    C) Doesn't do well with date correspondence to seasons sorting system
+    C) Different languages which is bloat.
 
-    D) It's either random pick any image, or select image. It sucks. It's annoying.
+    D) Doesn't do well with date correspondence to seasons sorting system
 
-5) If it's bloat then why feh is the only dependency? Isn't that not suckless?!
+    F) It's either random pick any image, or select image. It sucks and it's annoying.
+
+5) If it's bloat then why feh is the only dependency? Is that not suckless?!
 
     A) feh is well documented, and well implemented. 
 
     B) Written in pure C.
 
-    C) Widely used in nearly all linux and bsd. It is typically installed by default.
+    C) Widely used in suckless circle, and ricing world. It is typically installed by default nearly on all linux/bsd distros.
 
     D) I don't want to write yet another wallpaper header which then would make it a dependency. Feh already did the leg work.
     

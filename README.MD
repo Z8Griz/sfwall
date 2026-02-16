@@ -5,7 +5,7 @@
 * Mallable - easy copy paste code to create, and load different wallpaper folders/pictures (flavors)
 * Portable for all linux and BSD systems with just two files (nob and sfwall)
 
-<video width="640" height="360" controls>
+<video width="1280" height="800" controls>
   <source src="https://github.com/Z8Griz/sfwall/blob/master/showtime.mp4" type="video/mp4">
 </video>
 
